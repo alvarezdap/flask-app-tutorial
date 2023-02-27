@@ -4,6 +4,30 @@
     <title>Inteligencia Juridica</title>
   </head>
   <body>
-    Hola, aqui tenemos una muestra de inteligencia juridica.
+    <h1>
+      Inteligencia Juridica
+    </h1>  
+    <h2>
+      Demantronic
+    </h2>
+    <h3>
+      Selecciona una accion:
+    </h3>
+    <select name="accion" method="GET" action="/">
+      <option value="{{acciones_unicas[0]}}" selected>{{acciones_unicas[0]}}</option>
+      {% for accion in acciones_unicas[1:] %}
+      <option value="{{accion}}">{{accion}}</option>
+      {% endfor %}
+    </select>
+    <h3>
+      Selecciona un cantón:
+    </h3>
+    <select name="canton" method="GET" action="/">
+      <option value="{{cantones[0]}}" selected>{{cantones[0]}}</option>
+      {% for canton in cantones[1:] %}
+      <option value="{{canton}}">{{canton}}</option>
+      {% endfor %}
+    </select>
   </body>
 </html>
+
