@@ -10,8 +10,11 @@
     <h2>
       Demantronic
     </h2>
+    <p>
+      Asistente de construcción de demandas
+    </p>
     <h3>
-      Selecciona una accion:
+      Selecciona una acción:
     </h3>
     <select name="accion" method="GET" action="/">
       <option value="{{acciones_unicas[0]}}" selected>{{acciones_unicas[0]}}</option>
@@ -28,6 +31,12 @@
       <option value="{{canton}}">{{canton}}</option>
       {% endfor %}
     </select>
+    <h1>Hechos:</h1>
+    <ul>
+      {% for option in options %}
+        <li>{{ option }}</li>
+      {% endfor %}
+    </ul>
   </body>
 </html>
 
